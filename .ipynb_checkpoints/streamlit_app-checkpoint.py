@@ -1,4 +1,6 @@
 import streamlit as st
+import time
+from bs4 import BeautifulSoup
 
 """
 ## Web scraping on Streamlit Cloud with Selenium
@@ -36,5 +38,9 @@ with st.echo():
 
     content = driver.page_source
     soup = BeautifulSoup(content, "html.parser")
+
+    no_jobs = soup.find('div', id='root').find_all('div')[0].find_all('h1')[0].find_all('span')[0].text.strip()
+    
+    st.write(no_jobs)
     st.write(soup)
     st.code(driver.page_source)
