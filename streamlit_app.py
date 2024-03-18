@@ -25,6 +25,12 @@ options.add_argument("--disable-features=NetworkService")
 options.add_argument("--window-size=1920x1080")
 options.add_argument("--disable-features=VizDisplayCompositor")
 
+# Specify the desired ChromeDriver version
+driver_version = "122.0.6261.128"
+
+# Set ChromeDriver options
+uc.install(browser_executable_path=browser_executable_path, version=driver_version)
+
 with uc.Chrome(browser_executable_path=browser_executable_path,
                 # debug=False,
                 # headless=True,
