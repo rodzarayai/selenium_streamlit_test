@@ -43,7 +43,7 @@ with st.echo():
     
     except:
         
-        no_jobs = soup.find('span', class="sc-gKTcil jiOTDj").text.strip()
+        no_jobs = soup.find('span', class_="sc-gKTcil jiOTDj").text.strip()
         
         
     st.write(no_jobs)
