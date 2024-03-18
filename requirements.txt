@@ -1,5 +1,6 @@
 streamlit
-seleniumbase
-webdriver-manager
-beautifulsoup4
-undetected-chromedriver
+
+seleniumbase==1.61.1
+webdriver-manager==3.4.0
+beautifulsoup4==4.12.2
+undetected-chromedriver==3.0.3
