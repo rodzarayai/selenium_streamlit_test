@@ -32,5 +32,9 @@ with st.echo():
 
     driver = get_driver()
     driver.get(url = 'https://www.laborum.cl/empleos-publicacion-menor-a-7-dias.html')
+    time.sleep(5)
 
+    content = driver.page_source
+    soup = BeautifulSoup(content, "html.parser")
+    st.write(soup)
     st.code(driver.page_source)
