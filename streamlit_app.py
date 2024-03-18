@@ -38,13 +38,6 @@ with st.echo():
 
     content = driver.page_source
     soup = BeautifulSoup(content, "html.parser")
-    
-    if soup is not None:
-        st.write(soup)
-    else:
-        st.error("Failed to scrape the web page.")
 
-    if driver.page_source is not None:
-        st.code(driver.page_source)
-    else:
-        st.error("Failed to retrieve page source.")
+    st.code(driver.page_source)
+
