@@ -28,14 +28,12 @@ options.add_argument("--disable-features=VizDisplayCompositor")
 # Specify the desired ChromeDriver version
 driver_version = "122.0.6261.128"
 
-# Set ChromeDriver options
-uc.install(browser_executable_path=browser_executable_path, version=driver_version)
 
 with uc.Chrome(browser_executable_path=browser_executable_path,
                 # debug=False,
                 # headless=True,
                 options=options,
-                use_subprocess=False,
+                version=driver_version,
                 log_level=logging.DEBUG,
                 service_log_path='selenium.log') as driver:
     driver.get(url = 'https://www.laborum.cl/empleos-publicacion-menor-a-7-dias.html')    
